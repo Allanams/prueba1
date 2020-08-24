@@ -7,6 +7,9 @@
 * Updated: 7th June 2011
 */
 
+console.log('HOLAAAAAAAA');
+
+
 (function ($) {
     $.fn.craftyslide = function (options) {
 
