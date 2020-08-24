@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8" />
+  <!-- CSS pagina-->
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <!--[if lte IE 7]>
+  <link rel="stylesheet" href="style_ie.css" />
+  <![endif]-->
+
+  <title>Nexflit | Servicios</title>
+  <!-- Javascript de validacion del rut-->
+  <script type="text/javascript">
+
+  function checkRut(rut) {
+    // Despejar Puntos
+    var valor = rut.value.replace('.','');
+    // Despejar Guión
+    valor = valor.replace('-','');
+
+    // Aislar Cuerpo y Dígito Verificador
+    cuerpo = valor.slice(0,-1);
+    dv = valor.slice(-1).toUpperCase();
+
+    // Formatear RUN
+    rut.value = cuerpo + '-'+ dv
+
+    // Si no cumple con el mínimo ej. (n.nnn.nnn)
+    if(cuerpo.length < 7) { rut.setCustomValidity("RUT Invalido"); return false;}
+
+    // Calcular Dígito Verificador
+    suma = 0;
+    multiplo = 2;
+
+    // Para cada dígito del Cuerpo
+    for(i=1;i<=cuerpo.length;i++) {
+
+      // Obtener su Producto con el Múltiplo Correspondiente
+      index = multiplo * valor.charAt(cuerpo.length - i);
+
+      // Sumar al Contador General
+      suma = suma + index;
+
+      // Consolidar Múltiplo dentro del rango [2,7]
+      if(multiplo < 7) { multiplo = multiplo + 1; } else { multiplo = 2; }
+
+    }
+
+    // Calcular Dígito Verificador en base al Módulo 11
+    dvEsperado = 11 - (suma % 11);
+
+    // Casos Especiales (0 y K)
+    dv = (dv == 'K')?10:dv;
+    dv = (dv == 0)?11:dv;
+
+    // Validar que el Cuerpo coincide con su Dígito Verificador
+    if(dvEsperado != dv) { rut.setCustomValidity("RUT Inválido"); return false; }
+
+    // Si todo sale bien, eliminar errores (decretar que es válido)
+    rut.setCustomValidity('');
+  }
+
+  </script>
+
+</head>
+<body id="registro">
+
+  <div id="border">
+    <div id="main_wrapper">
+      <header>
+
+        <div id="main_title">
+          <img src="images/header.jpg" alt="header de pagina" id="header" />
+          <a href="index.html"><img src="images/nesflin.png" alt="Logo de pagina" id="logo" /></a>
+
+          <!--Navegador-->
+
+          <nav>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+
+              <li><a href="registro.html">Registro</a></li>
+
+              <li><a href="nosotros.html">Nosotros</a></li>
+
+              <li><a href="servicios.html">Nuestros servicios</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section>
+        <!-- Formulario de registro-->
+        <form>
+          <left>
+            <h1>Formulario de datos de Cliente</h1>
+            <img src="images/cara.jpg" alt="Logo de odontologia" id="logo" width="120" height="100" /></a>
+            <p>Run: <input type="text"  size="30" maxlength="11" class="campo" name="run" required oninput="checkRut(this)" placeholder="Ingrese RUT">
+              <br>
+              <p>Fecha de Nacimiento: <input type="date" size="30" maxlength="200" class="campo" name="Fecha" required placeholder="Ingrese Fecha de Nacimiento" >
+                <br>
+                <p>Nombre: <input type="text" size="30" maxlength="200" class="campo" name="Nombre" required placeholder="Ingrese Nombre">
+                  <br>
+                  <p>Apellido: <input type="text" size="30" maxlength="200" class="campo" name="apellido" required placeholder="Ingrese Apellido">
+                    <br>
+                    <p>Correo: <input type="text" size="30" maxlength="200" class="campo" name="correo"  pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required placeholder="Ingrese correo">
+                      <br>
+                      <p>Genero:
+                        <p><input type="radio" name="genero" value="Masculino">Masculino
+                          <p><input type="radio" name="genero" value="Femenino">Femenino
+                            <p><input type="radio" name="genero" value="Otro">Otro
+                              <p><input type="radio" name="genero" value="Prefiero" checked="">Prefiero no Responder
+                                <br>
+                                <p >Medio de pago:
+                                  <select name = "pago">
+                                    <option value="Visa">Tarjeta Visa</option>
+                                    <option value="Mastercard">Tarjeta Mastercard</option>
+                                    <option value="Amiex">Tarjeta Amiex</option>
+                                    <option value="tarjeta regalo">Tarjeta de regalo</option>
+                                  </select><br>
+                                  <p><input type="submit" onclick="validar();" value="Enviar"  class="boton">
+                                  </left>
+                                </form>
+                              </section>
+                              <br/>
+                              <hr>
+                              <center>
+
+                                <!-- Footer-->
+                                <footer>
+                                  <div class="foot">
+                                    <div class="info">
+                                      Nexflit - Sucursal Central• Diagonal 353, 2º 3ª, 08037 Viña del Mar • Tel. 93 457 77 67 • <a class="foodates" href="#">info@netflitcontacto.com</a>
+                                      <br>
+                                    </div>
+                                    <br>
+                                    <div class="Redes Sociales">
+                                      <img src="images/facebook.png" alt="Facebook" id="Facebook" width="40" height="34" /></a>
+                                      <img src="images/twitter.png" alt="Twitter" id="Linkedin" width="40" height="34" /></a>
+                                      <img src="images/instagram.png" alt="Instagram" id="Instagram" width="40" height="34" /></a>
+                                    </div>
+                                  </div>
+                                </footer>
+                              </center>
+                            </div>
+                          </div>
+                        </body>
+                        </html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Nexflit | Inicio</title>
+  <!-- CSS pagina-->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Lato de Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <!--[if lte IE 7]>
+  <link rel="stylesheet" href="style_ie.css" />
+  <![endif]-->
+
+  <!-- Librerias importadas-->
+  <link rel="stylesheet" href="css/craftyslide.css" />
+  <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+  <script src="js/craftyslide.js"></script>
+  <link rel="shortcut icon" href="../favicon.ico">
+
+
+</head>
+<body id="index">
+  <div id="main_wrapper">
+    <header>
+
+      <div id="main_title">
+        <img src="images/header.jpg" alt="header de pagina" id="header" />
+        <a href="index.html"><img src="images/nesflin.png" alt="Logo de pagina" id="logo" /></a>
+
+        <!--Navegador-->
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+
+            <li><a href="registro.html">Registro</a></li>
+
+            <li><a href="nosotros.html">Nosotros</a></li>
+
+            <li><a href="servicios.html">Nuestros servicios</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--slideshow de peliculas-->
+    <section>
+      <h1>Estrenos - Peliculas</h1>
+      <br>
+      <br>
+      <div class="slider">
+        <div id="slideshow">
+          <ul>
+            <li>
+              <img src="images/peliculas/estreno1.jpeg" title="Ready player one" />
+            </li>
+            <li>
+              <img src="images/peliculas/estreno2.jpg" title="Vengadores: Infinity War" />
+            </li>
+            <li>
+              <img src="images/peliculas/estreno3.jpg" title="Deadpool 2" />
+            </li>
+            <li>
+              <img src="images/peliculas/estreno4.jpg" title="jurassic world: fallen kingdom" />
+            </li>
+            <li>
+              <img src="images/peliculas/estreno5.jpg" title="Black panther" />
+            </li>
+            <li>
+              <img src="images/peliculas/estreno6.jpg" title="Maze runner: the death cure" />
+            </li>
+          </ul>
+        </div>
+        <script>
+        $("#slideshow").craftyslide({
+          'width': 640,
+          'height': 400,
+          'pagination': true,
+          'fadetime': 400,
+          'delay': 3000,
+          'pagination': false
+        });
+        </script>
+
+      </div>
+
+
+
+      <hr>
+
+
+      <br>
+      <br>
+      <!-- Galeria de fotos/-->
+      <h1>Series</h1>
+      <br>
+      <div class="polaroid-images">
+        <a href="http://www.sensacine.com/series/serie-21504/"><img height="200" src="images/series/serie1.jpg" alt="serie1" title="serie1" /></a>
+        <a href="http://www.sensacine.com/series/serie-18240/"><img height="200" src="images/series/serie2.jpg" alt="serie2" title="serie2" /></a>
+        <a href="http://www.sensacine.com/series/serie-19156/"><img height="200" src="images/series/serie3.jpg" alt="serie3" title="serie3" /></a>
+        <a href="http://www.sensacine.com/series/serie-19941/"><img height="200" src="images/series/serie4.jpg" alt="serie4" title="serie4" /></a>
+        <a href="http://www.sensacine.com/series/serie-20328/"><img height="200" src="images/series/serie5.jpg" alt="serie5" title="serie5" /></a>
+        <a href="http://www.sensacine.com/series/serie-3517/"><img height="200" src="images/series/serie6.jpg" alt="serie6" title="serie6" /></a>
+        <a href="http://www.sensacine.com/series/serie-10855/"><img height="200" src="images/series/serie7.jpg" alt="serie7" title="serie7" /></a>
+        <a href="http://www.sensacine.com/series/serie-10368/"><img height="200" src="images/series/serie8.jpg" alt="serie8" title="serie8" /></a>
+        <a href="http://www.sensacine.com/series/serie-10411/"><img height="200" src="images/series/serie9.jpg" alt="serie9" title="serie9" /></a>
+        <a href="http://www.sensacine.com/series/serie-7663/"><img height="200" src="images/series/serie10.jpg" alt="serie10" title="serie10"/></a>
+      </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <center>
+      <!-- footer-->
+      <footer>
+        <hr>
+        <div class="foot">
+          <div class="info">
+
+            Nexflit - Sucursal Central• Diagonal 353, 2º 3ª, 08037 Viña del Mar • Tel. 93 457 77 67 • <a class="foodates" href="#">info@netflitcontacto.com</a>
+            <br>
+          </div>
+          <br>
+          <div class="Redes Sociales">
+            <img src="images/facebook.png" alt="Facebook" id="Facebook" width="40" height="34" /></a>
+            <img src="images/twitter.png" alt="Twitter" id="Linkedin" width="40" height="34" /></a>
+            <img src="images/instagram.png" alt="Instagram" id="Instagram" width="40" height="34" /></a>
+          </div>
+        </div>
+      </footer>
+    </center>
+
+  </div>
+
+</body>
+
+</html>

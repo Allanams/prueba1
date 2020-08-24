@@ -1,0 +1,271 @@
+/*CSS de las paginas*/
+#index, #nosotros, #servicio, #registro{
+background-color: #BEBEBE;
+font-family: 'Lato' , sans-serif;
+}
+
+/*Contenedor General*/
+#main_wrapper{
+    float: left;
+    margin: 10px 175px;
+    overflow: hidden;
+    width: 995px;
+    background-color: #242424;
+    border-radius: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#index #main_wrapper{height: 1700px;}
+#nosotros #main_wrapper{height: 640px;}
+#servicio #main_wrapper{height: 825px;}
+#registro #main_wrapper{height: 940px;}
+
+h1{
+	text-align: center;
+    color: #fff;
+    font-family: "Times New Roman", Times, serif;
+}
+hr{
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: gray;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+/*Header*/
+header{
+	margin: -10px -10px
+}
+header img
+{
+    display: inline-block;
+    padding: 2px;
+    width: 1010px;
+    height: 200px;
+}
+#main_title a img{
+	position: absolute;
+    top: 89px;
+    width: 125px;
+    height: 125px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    padding-left: 1015px;
+}
+
+nav{
+    position: absolute;
+    top: 180px;
+    text-align: left;
+    transform: translate(-50%, -50%);
+    padding-left: 1387px;
+}
+
+/* Navegación */
+
+nav
+{
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+nav ul
+{
+    list-style-type: none;
+    border-radius: 12px;
+    background: #941a1a;
+    border: 1px solid gray;
+    width: 920px;
+}
+
+nav li
+{
+    display: inline-block;
+        margin-right: 70px;
+    margin-left: 62px;
+}
+
+nav a
+{
+    font-size: 1.3em;
+    color: #ffffff;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #ffffff;
+    font-weight: bold;
+}
+/*Slick inicio*/
+.slider{
+	height: 600px;
+	width: 900px;
+    margin: 0 auto;
+    padding-left: 175px;
+}
+/*Galeria de fotos polaroid*/
+.polaroid-images a
+{
+    background: white;
+    display: inline;
+    float: left;
+    margin: 0 15px 30px;
+    padding: 10px 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    transition: all .15s linear;
+    z-index:0;
+    position:relative;
+}
+
+
+.polaroid-images a:after {
+    color: #333;
+    font-size: 20px;
+    content: attr(title);
+    position: relative;
+    top:15px;
+}
+
+.polaroid-images img {
+    display: block;
+    width: inherit;
+}
+
+.polaroid-images a:nth-child(2n)
+{
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    transform: rotate(4deg);
+}
+.polaroid-images a:nth-child(3n) {
+    -webkit-transform: rotate(-24deg);
+    -moz-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+}
+.polaroid-images a:nth-child(4n)
+{
+    -webkit-transform: rotate(14deg);
+    -moz-transform: rotate(14deg);
+    transform: rotate(14deg);
+}
+.polaroid-images a:nth-child(5n)
+{
+    -webkit-transform: rotate(-18deg);
+    -moz-transform: rotate(-18deg);
+    transform: rotate(-18deg);
+}
+.polaroid-images a:hover{
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    z-index:10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0,0,0,.7);
+        box-shadow: 0 10px 20px rgba(0,0,0,.7);
+}
+/*registro*/
+form{
+    background-color: #313133;
+    width: 475px;
+    margin-left: 27%;
+    height: 620px;
+    text-align: left;
+    padding-left:25px;
+}
+form img, form p .boton {
+    margin-left: 35%;
+}
+form p .campo {
+    float: right;
+    width: 250px;
+    margin-right: 25px;
+}
+
+/*Nosotros*/
+#asideNosotros
+{
+    position: relative;
+    width: 900px;
+    background-color: #706b64;
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+    margin-left: 3%;
+    height: 300px;
+}
+#asideNosotros .imgNosotros{
+    float: left;
+}
+#asideNosotros .imgNosotros img{
+    width: 150px;
+    height: 150px;
+    padding-left: 20px;
+}
+#asideNosotros .parrafoNosotros{
+    float: right;
+    width: 500px;
+    padding-right: 200px;
+    font-size: 18px;
+}
+
+/*Servicios*/
+#servicio section{
+    background-color: black;
+}
+#servicios{
+    background: black;
+}
+
+.red_button
+{
+    display: inline-block;
+    height: 25px;
+    position: center;
+    right: 5px;
+    bottom: 5px;
+    background: url('images/fond_degraderouge.png') repeat-x;
+    border: 1px solid #760001;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 8px 0px 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.red_button img
+{
+    border: 0;
+}
+
+/*Footer*/
+#index footer{
+    position: absolute;
+    margin-top: 540px;
+    width: 995px;
+    padding-left: 0px;
+}
+
+footer{
+    position: absolute;
+    padding-left: 100px;
+}
